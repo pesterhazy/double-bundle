@@ -13,6 +13,8 @@ Hence the name - the double bundle approach.
 
 ## Details
 
+This project is built on Reagent and Figwheel. Note, however, that neither of these are essential - a similar approach would work for any browser-based Clojurescript project that consumes NPM dependencies.
+
 To show how to include third party React dependencies, this project includes the [react-datetime](https://github.com/YouCanBookMe/react-datetime) calendar component.
 
 ## Setup
@@ -26,6 +28,12 @@ lein figwheel
 ```
 
 Then open your browser at [localhost:3449](http://localhost:3449/).
+
+## Discussion
+
+This project is based on fighweel-template. To see the changes from an empty fighwheel template, see this [diff view](https://github.com/pesterhazy/double-bundle/compare/init...master).
+
+For simplicity, we're not making use of the `npm-deps` feature included in recent versions of the Clojurescript compiler here. The Google Closure compiler is not involved. The upside of this choice is that any NPM packages should work, as long as it is added to `library.js`.
 
 ## TODO
 
