@@ -1,39 +1,39 @@
 # double-bundle
 
-FIXME: Write a one-line description of your library/project.
+Demonstration of the "double-bundle" approach to integrating NPM dependencies into ClojureScript projects
 
 ## Overview
 
-FIXME: Write a paragraph about the library/project and highlight its goals.
+You can integrate NPM dependencies in a Clojurescript project by building a separate bundle using webpack. The resulting application contains two bundles:
+
+- `js/npm-bundle.js`, built by webpack
+- `js/compiled/double_bundle.js`, built by the Clojurescript compiler (and Google Closure)
+
+Hence the name - the double bundle approach.
+
+## Details
+
+To show how to include third party React dependencies, this project includes the [react-datetime](https://github.com/YouCanBookMe/react-datetime) calendar component.
 
 ## Setup
 
-To get an interactive development environment run:
+To see the demo, run this:
 
-    lein figwheel
+```shell
+yarn install
+yarn build
+lein figwheel
+```
 
-and open your browser at [localhost:3449](http://localhost:3449/).
-This will auto compile and send all changes to the browser without the
-need to reload. After the compilation process is complete, you will
-get a Browser Connected REPL. An easy way to try it is:
+Then open your browser at [localhost:3449](http://localhost:3449/).
 
-    (js/alert "Am I connected?")
+## TODO
 
-and you should see an alert in the browser window.
-
-To clean all compiled files:
-
-    lein clean
-
-To create a production build run:
-
-    lein do clean, cljsbuild once min
-
-And open your browser in `resources/public/index.html`. You will not
-get live reloading, nor a REPL. 
+- Show how to build a single prod bundle
+- Handle advanced compilation and externs
 
 ## License
 
-Copyright © 2014 FIXME
+Copyright © 2017 Paulus Esterhazy
 
 Distributed under the Eclipse Public License either version 1.0 or (at your option) any later version.
