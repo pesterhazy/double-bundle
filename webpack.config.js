@@ -1,6 +1,6 @@
 module.exports = {
      entry: './library.js',
      output: {
-         filename: 'bundle.js'
+         filename: 'resources/public/js/npm-bundle.js'
      }
  };

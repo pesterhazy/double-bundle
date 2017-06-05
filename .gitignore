@@ -11,5 +11,5 @@ pom.xml
 .lein-plugins/
 .repl
 .nrepl-port
-bundle.js
 node_modules
+/resources/public/js/npm-bundle.js
