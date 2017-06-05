@@ -9,8 +9,13 @@
 
 (defonce app-state (atom {:text "Hello world!"}))
 
+(defn datetime []
+  [:> js/ReactDatetime {:input false}])
+
 (defn hello-world []
-  [:h1 (:text @app-state)])
+  [:div
+   [:h1 (:text @app-state)]
+   [datetime]])
 
 (reagent/render-component [hello-world]
                           (. js/document (getElementById "app")))
