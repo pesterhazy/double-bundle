@@ -1,5 +1,6 @@
 (ns double-bundle.core
-  (:require [reagent.core :as reagent :refer [atom]]))
+  (:require [reagent.core :as reagent :refer [atom]]
+            [goog.object :as gobj]))
 
 (enable-console-print!)
 
@@ -10,7 +11,7 @@
 (defonce app-state (atom {:text "Hello world!"}))
 
 (defn datetime []
-  [:> js/ReactDatetime {:input false}])
+  [:> (gobj/get js/window "ReactDatetime") {:input false}])
 
 (defn hello-world []
   [:div
