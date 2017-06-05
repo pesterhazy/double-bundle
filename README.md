@@ -35,10 +35,12 @@ This project is based on fighweel-template. To see the changes from an empty fig
 
 For simplicity, we're not making use of the `npm-deps` feature included in recent versions of the Clojurescript compiler here. The Google Closure compiler is not involved. The upside of this choice is that any NPM packages should work, as long as it is added to `library.js`.
 
+Similarly, for the sake of operational simplicity, we don't provide an externs files for an external component. Instead, we [use `goog.object/get`](https://github.com/pesterhazy/double-bundle/blob/8b523a9c774fb04635a01a85940f62217bb84d09/src/double_bundle/core.cljs#L14) to retrieve the component while avoiding minification during Advanced Compilation.
+
 ## TODO
 
 - Show how to build a single prod bundle
-- Handle advanced compilation and externs
+- Does Reagent require externs in advanced compilation?
 
 ## License
 
