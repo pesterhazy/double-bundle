@@ -1,0 +1,17 @@
+{
+  "name": "double-bundle",
+  "version": "1.0.0",
+  "main": "library.js",
+  "author": "Paulus Esterhazy",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --config webpack.config.js"
+  },
+  "devDependencies": {
+    "webpack": "^2.6.1"
+  },
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  }
+}
