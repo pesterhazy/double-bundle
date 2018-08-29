@@ -11,7 +11,7 @@
     "webpack": "^2.6.1"
   },
   "dependencies": {
-    "moment": "2.18.1",
+    "moment": "^2.22.2",
     "react": "15.4.2",
     "react-datetime": "2.8.10",
     "react-dom": "15.4.2"
