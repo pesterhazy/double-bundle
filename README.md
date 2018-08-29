@@ -2,6 +2,10 @@
 
 Demonstration of the "double-bundle" approach to integrating NPM dependencies into ClojureScript projects
 
+# PLEASE NOTE
+
+This repository is no longer maintained. Please refer to the [cljs-spa-example](https://github.com/pesterhazy/cljs-spa-example) project instead.
+
 ## Overview
 
 You can integrate NPM dependencies in a Clojurescript project by building a separate bundle using webpack. The resulting application contains two bundles:
